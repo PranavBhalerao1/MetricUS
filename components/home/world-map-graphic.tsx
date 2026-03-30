@@ -72,7 +72,7 @@ export function WorldMapGraphic() {
           </g>
         ))}
 
-        <text x="430" y="384" textAnchor="middle" fill="#e2e8f0" fontSize="14" fontWeight="600">
+        <text x="430" y="355" textAnchor="middle" fill="#e2e8f0" fontSize="14" fontWeight="600">
           Green = SI standard | Red = Primary holdouts
         </text>
       </motion.svg>
