@@ -56,6 +56,13 @@ body {
 }
 
 @layer base {
+
+  button,
+  [role="button"],
+  a {
+    cursor: pointer;
+  }
+
   * {
     @apply border-border;
   }
@@ -83,4 +90,3 @@ body {
     @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
   }
 }
-
