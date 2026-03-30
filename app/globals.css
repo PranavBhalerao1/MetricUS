@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 212 50% 16%;
+  --card: 0 0% 100%;
+  --card-foreground: 212 50% 16%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 212 50% 16%;
+  --primary: 212 52% 24%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 145 66% 96%;
+  --secondary-foreground: 145 80% 20%;
+  --muted: 213 32% 94%;
+  --muted-foreground: 214 19% 39%;
+  --accent: 145 62% 45%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214 31% 88%;
+  --input: 214 31% 88%;
+  --ring: 145 62% 45%;
+  --radius: 0.9rem;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  font-feature-settings:
+    "rlig" 1,
+    "calt" 1;
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+.dark {
+  --background: 214 52% 10%;
+  --foreground: 210 40% 98%;
+  --card: 214 42% 12%;
+  --card-foreground: 210 40% 98%;
+  --popover: 214 42% 12%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 210 40% 98%;
+  --primary-foreground: 212 52% 24%;
+  --secondary: 212 44% 20%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 214 34% 18%;
+  --muted-foreground: 215 20% 70%;
+  --accent: 145 62% 45%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214 32% 23%;
+  --input: 214 32% 23%;
+  --ring: 145 62% 45%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    background:
+      radial-gradient(circle at top, rgba(30, 58, 95, 0.12), transparent 56%),
+      linear-gradient(180deg, rgba(34, 197, 94, 0.08) 0%, transparent 34%);
+    min-height: 100vh;
+  }
+
+  .dark body {
+    background:
+      radial-gradient(circle at top, rgba(34, 197, 94, 0.12), transparent 54%),
+      linear-gradient(180deg, rgba(30, 58, 95, 0.45) 0%, rgba(10, 24, 41, 0.85) 52%);
+  }
+}
+
+@layer components {
+  .metric-glass {
+    @apply rounded-2xl border border-white/30 bg-white/70 backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/60;
+  }
+
+  .metric-section {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+}
+
